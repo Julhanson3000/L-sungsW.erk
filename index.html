@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LösungsW.erk – Ingenieurbüro</title>
+  <!-- Google Font Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Header mit Sticky Menü und Dark Mode Toggle -->
+  <header>
+    <div class="logo">LösungsW.erk</div>
+    <nav>
+      <a href="#ueber">Über mich</a>
+      <a href="#leistungen">Leistungen</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="#impressum">Impressum</a>
+    </nav>
+    <div class="dark-mode-toggle">
+      <label class="switch" title="Dark Mode umschalten">
+        <input type="checkbox" id="darkModeCheckbox" aria-label="Dark Mode umschalten" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </header>
+
+  <main>
+    <section id="start">
+      <h1>Willkommen bei LösungsW.erk</h1>
+      <p>Ihr Ingenieurbüro für Gutachten, Akkreditierung und Fahrzeugtechnik</p>
+    </section>
+
+    <section id="ueber">
+      <h2>Über mich</h2>
+      <!-- Profilbild zentriert -->
+      <img src="images/about-me.jpg" alt="Profilbild Julia" class="profile-pic" />
+      <p>Ich bin Julia Schützenhofer, beratende Ingenieurin mit Expertise in Unfallanalytik, Akkreditierung und technischer Dokumentation. Mit einem fundierten technischen Hintergrund unterstütze ich Sie dabei, komplexe Anforderungen einfach und effizient zu meistern.</p>
+    </section>
+
+    <section id="leistungen">
+      <h2>Leistungen</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Technische Gutachten</h3>
+          <p>Unabhängige Gutachten, insbesondere für Verkehrsunfälle und Fahrzeugtechnik – fundiert analysiert und nachvollziehbar dokumentiert.</p>
+        </div>
+        <div class="service-card">
+          <h3>Akkreditierung & QM</h3>
+          <p>Beratung und Begleitung von Laboratorien und Dienstleistern bei der Einführung und Optimierung von Qualitätsmanagementsystemen (ISO/IEC 17025).</p>
+        </div>
+        <div class="service-card">
+          <h3>Technische Dokumentation</h3>
+          <p>Erstellung von Berichten, Konformitätsbewertungen (CE), Behördenkommunikation sowie Dokumenten gemäß Normen wie EMV oder Maschinenrichtlinie.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt">
+      <h2>Kontakt</h2>
+      <p>Sie möchten mit mir zusammenarbeiten oder haben Fragen? Ich freue mich auf Ihre Nachricht!</p>
+      <p><strong>Telefon:</strong> +43 123 456 789</p>
+      <p><strong>E-Mail:</strong> info@loesungswerk.at</p>
+    </section>
+
+    <section id="impressum">
+      <h2>Impressum</h2>
+      <p>Julia Schützenhofer<br />
+      Musterstraße 12<br />
+      12345 Musterstadt<br />
+      Österreich</p>
+      <p>Telefon: +43 123 456 789<br />
+      E-Mail: info@loesungswerk.at</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 LösungsW.erk – Julia Schützenhofer</p>
+  </footer>
+</body>
+</html>

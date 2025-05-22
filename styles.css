@@ -1,0 +1,210 @@
+/* Grundfarben Light Mode mit höherem Kontrast */
+:root {
+  --background-color: #ffffff;
+  --text-color: #1a1a1a;
+  --header-bg: #f0f0f0;
+  --link-color: #222222;
+  --link-hover-color: #0056b3; /* kräftiges Blau */
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.12);
+  --footer-bg: #eaeaea;
+}
+
+/* Dark Mode Farben */
+body.dark-mode {
+  --background-color: #121212;
+  --text-color: #e6e6e6;
+  --header-bg: #1c1c1c;
+  --link-color: #bbbbbb;
+  --link-hover-color: #3399ff;
+  --card-bg: #222222;
+  --card-shadow: rgba(0, 0, 0, 0.8);
+  --footer-bg: #1a1a1a;
+}
+
+/* Allgemeines Styling */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Sticky Header mit Schatten */
+header {
+  position: sticky;
+  top: 0;
+  background: var(--header-bg);
+  z-index: 999;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+/* Logo als Schrift */
+.logo {
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  color: var(--text-color);
+  user-select: none;
+  font-style: italic;
+}
+
+/* Navigation Links */
+nav a {
+  color: var(--link-color);
+  text-decoration: none;
+  margin-left: 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--link-hover-color);
+  border-bottom: 2px solid var(--link-hover-color);
+  padding-bottom: 2px;
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+  margin-left: 2rem;
+}
+
+/* Main Container */
+main {
+  max-width: 960px;
+  margin: 4rem auto 3rem auto;
+  padding: 2rem 1rem;
+  background-color: var(--card-bg);
+  box-shadow: 0 0 15px var(--card-shadow);
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+/* Überschriften */
+h1, h2, h3 {
+  color: var(--text-color);
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Absätze */
+p, li {
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+/* Grid für Leistungen: 4 Spalten auf breiten Bildschirmen, 1-2 Spalten auf kleineren */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.8rem;
+  margin-top: 2rem;
+}
+
+/* Leistungs-Karten */
+.service-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.8rem 2rem;
+  box-shadow: 0 4px 10px var(--card-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px var(--card-shadow);
+}
+
+/* Profilbild zentriert */
+#ueber {
+  text-align: center;
+}
+
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 1rem auto;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: var(--footer-bg);
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+/* Dark Mode Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 26px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px; width: 20px;
+  left: 3px; bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* Wenn aktiviert */
+input:checked + .slider {
+  background-color: #3399ff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+
